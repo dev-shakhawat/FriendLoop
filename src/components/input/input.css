@@ -1,0 +1,3 @@
+.input{
+    @apply   w-full border border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand
+}
