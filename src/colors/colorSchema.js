@@ -10,15 +10,26 @@ function colorSchema() {
 
         // light mode
         "light": {
-            "logo": "text-[#2D3250]",
-            "txtbrand": "text-[#2D3250]",
+            "brand": "text-[#2D3250]",
+            "bg": "bg-[#ffffff]",
+            "bgsecondery": "bg-[#F5F5F5]",
+            "hoverbg": "",
+            "txt": "text-[#2D3250]",
+            "txtsecondery": "text-[#BEBEBE]",
+            "border": "border border-[#2E2E2E]",
+
         } ,   
         
         
         // dark mode
         "dark": {
-            "logo": "text-[#e63f36]",
-            "txtbrand": "text-[#e63f36]",
+            "brand": "text-[#0069D2]",
+            "bg": "bg-[#101218]",
+            "bgsecondery": "bg-[#2E2E2E]",
+            "hoverbg": "hover:bg-[#54585D]",
+            "txt": "text-[#ffffff]",
+            "txtsecondery": "text-[#BEBEBE]",
+            "border": "border border-[#2E2E2E]",
         }
 
     }

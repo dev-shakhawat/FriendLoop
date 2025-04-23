@@ -21,10 +21,10 @@
 
 
     /* animation */
-    --animate-inputlabel: inputlabel 1s ease-in;
+    --animate-inputlabel: inputlabel 1s ease alternate ;
     @keyframes inputlabel {
       0% {
-        top: 0;
+        top: 15px;
         left: 35px
       }
       50% {
