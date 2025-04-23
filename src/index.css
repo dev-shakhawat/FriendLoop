@@ -16,6 +16,26 @@
 
     /* blur */
     --blur-primary: 5px; 
+
+
+
+
+    /* animation */
+    --animate-inputlabel: inputlabel 1s ease-in;
+    @keyframes inputlabel {
+      0% {
+        top: 0;
+        left: 35px
+      }
+      50% {
+        top: -10px;
+        left: 35px
+      }
+      100%{
+        top: -10px;
+        left: 0
+      }
+    }
 }
 
 

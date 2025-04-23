@@ -37,7 +37,7 @@ export const Signup = () => {
   return (
     <div className='grid place-items-center h-screen '>
         <div className="text-center">
-                <h2 onClick={hudai}  className={`flex items-center gap-2 font-ubuntu font-bold text-3xl justify-center ${colorSchema().txtbrand}`}><RiMicrosoftLoopFill/><span>FriendLoop</span></h2>
+                <h2 onClick={hudai}  className={`flex items-center gap-2 font-ubuntu font-bold text-3xl justify-center ${colorSchema().logo}`}><RiMicrosoftLoopFill/><span>FriendLoop</span></h2>
                 <h3 onClick={faltu} className="mt-10 font-opensans  " >Lets create your <span className='font-ubuntu font-medium text-beand '>FriendLoop</span> account now. </h3>
 
                 {/* signup form */}

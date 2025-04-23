@@ -10,12 +10,14 @@ function colorSchema() {
 
         // light mode
         "light": {
+            "logo": "text-[#2D3250]",
             "txtbrand": "text-[#2D3250]",
         } ,   
         
         
         // dark mode
         "dark": {
+            "logo": "text-[#e63f36]",
             "txtbrand": "text-[#e63f36]",
         }
 
