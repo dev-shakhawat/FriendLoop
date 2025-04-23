@@ -11,6 +11,7 @@ function colorSchema() {
         // light mode
         "light": {
             "brand": "text-[#2D3250]",
+            "btncolor":  "bg-[#2D3250] text-[#ffffff]",
             "bg": "bg-[#ffffff]",
             "bgsecondery": "bg-[#F5F5F5]",
             "hoverbg": "",
@@ -24,6 +25,7 @@ function colorSchema() {
         // dark mode
         "dark": {
             "brand": "text-[#0069D2]",
+            "btncolor" : "bg-[#0069D2] text-[#ffffff]",
             "bg": "bg-[#101218]",
             "bgsecondery": "bg-[#2E2E2E]",
             "hoverbg": "hover:bg-[#54585D]",
