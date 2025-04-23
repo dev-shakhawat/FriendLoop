@@ -24,7 +24,7 @@ export const InputDesign = ({ type, label , icon , onChange , value , id}) => {
           onChange={onChange} 
           id={id}
           placeholder=" "
-          className={`peer ${color.txtsecondery} ${inpType == "password" ? "filter blur-[3px]" : ""} pl-1 pr-8  w-full h-full font-ubuntu placeholder-transparent outline-none  `}
+          className={`peer ${color.txt} ${inpType == "password" ? "filter blur-[3px]" : ""} pl-1 pr-8 text-[14px] w-full h-full font-ubuntu placeholder-transparent outline-none  `}
         />
         {type == "password" &&
           <button type="button" className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer">{inpType == "password" ? <GoEyeClosed onClick={()=> setInpType("text")} className={`${color.txtsecondery}`}/> : <GoEye onClick={()=> setInpType("password")} className={`${color.txtsecondery}`}/>}</button>

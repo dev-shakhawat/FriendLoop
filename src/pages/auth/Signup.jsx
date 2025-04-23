@@ -50,7 +50,7 @@ export const Signup = () => {
                     <InputDesign id={"password"} value={password} onChange={(e)=> handelPassword(e)}  type={"password"} label={"password"} icon={<BsShieldLock/>} />
                     <div className="">
                       <Button type={"button"} text={"Sign up"} style={"w-full py-2 font-ubuntu font-semibold  "} icon={<FaRegAddressBook/>} />
-                      <p className={`font-ubuntu text-sm mt-1 ${color.txt}  ` }>By registering you agree to the FriendLoop <Link to="/" className={`font-semibold ${color.brand} `}>Terms of Use</Link></p>
+                      <p className={`font-ubuntu text-sm mt-1 ${color.txt}  ` }>By registering you agree to the FriendLoop <Link to="/terms" className={`font-semibold ${color.brand} `}>Terms of Use</Link></p>
                     </div>
                   </div>
                 </form>
