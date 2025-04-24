@@ -40,3 +40,6 @@
 
 
 /* common */
+.underlined{
+  @apply relative after:content-[""] after:w-full after:h-[2px] after:absolute after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300;
+}

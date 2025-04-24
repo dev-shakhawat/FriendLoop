@@ -11,7 +11,7 @@ export const InputDesign = ({ type, label , icon , onChange , value , id}) => {
   const [inpType , setInpType] = React.useState(type)
 
   return (
-    <div className={`relative flex items-center border rounded-md h-[40px] ${color.border}   `}>
+    <div className={`relative flex items-center border rounded-md h-[40px] ${color.border}  w-full  `}>
 
       {/* icon  */}
       {icon &&   <div className={`px-2 bg-brand/20 h-full grid place-items-center ${color.txt} ${color.bgsecondery}  rounded-tl-md rounded-bl-md   `}> {icon} </div> }
