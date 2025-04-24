@@ -3,7 +3,6 @@ import React, { use, useState } from 'react'
 
 
 // icons
-import { FaRegAddressBook } from "react-icons/fa6";
 import { RiMicrosoftLoopFill } from "react-icons/ri";
 import { AiOutlineLogin } from "react-icons/ai";
 import {InputDesign } from '../../components/input/InputDesign';
@@ -40,12 +39,12 @@ export const Login = () => {
                 <h2 className={` flex items-center gap-2 font-ubuntu font-bold text-3xl justify-center ${color.brand}`}><RiMicrosoftLoopFill/><span>FriendLoop</span></h2>
                 <h3 className={` ${color.txt} font-medium mt-5 font-opensans`}>Welcome back! <br/> Missed us? We missed you too.  <br/> Let’s get you connected. </h3>
 
-                {/* signup form */}
+                {/* login form */}
                 <form  className={`p-2 mt-10 `}>
                   <div className="flex flex-col gap-5">
                     <InputDesign id={"email"} value={email} onChange={(e)=> handelEmail(e)}  type={"text"} label={"email"} icon={<LuMailOpen/>} />
                     <div className="flex flex-col items-end w-full ">
-                      <Link to={""} className={`font-opensans hover:underline  text-sm mt-1 ${color.txt}   `}  >Forgot Password?</Link>
+                      <Link to={"/resetpassword"} className={`font-opensans hover:underline  text-sm mt-1 ${color.txt}   `}  >Forgot Password?</Link>
                       <InputDesign id={"password"} value={password} onChange={(e)=> handelPassword(e)}  type={"password"} label={"password"} icon={<BsShieldLock/>} />
                     </div>
                     <div className="">
