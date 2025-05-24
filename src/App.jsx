@@ -6,6 +6,7 @@ import { store } from "./redux/store";
 import { Provider } from 'react-redux'
 import { Terms } from "./pages/Terms";
 import { ForgotPass } from "./pages/auth/ForgotPass";
+import { Checkpoint } from "./pages/auth/Checkpoint";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/resetpassword" element={<ForgotPass />} />
+            <Route path="/checkpoint" element={<Checkpoint />} />
           </Route>
         </Routes>
       </BrowserRouter>

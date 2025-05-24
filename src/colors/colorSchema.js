@@ -10,28 +10,30 @@ function colorSchema() {
 
         // light mode
         "light": {
-            "brand": "text-[#2D3250]",
-            "btncolor":  "bg-[#2D3250] text-[#ffffff]",
-            "bg": "bg-[#ffffff]",
-            "bgsecondery": "bg-[#F5F5F5]",
+            "brand": "#2D3250",
+            "btnbg":  "#0069D2",
+            "btnColor": "#ffffff",
+            "bg": "#ffffff",
+            "bgSecondery": "#F5F5F5",
             "hoverbg": "",
-            "txt": "text-[#2D3250]",
-            "txtsecondery": "text-[#BEBEBE]",
-            "border": "border border-[#2E2E2E]",
+            "txt": "#2D3250",
+            "textSecondery": "#BEBEBE",
+            "borderColor": "#2E2E2E",
 
         } ,   
         
         
         // dark mode
         "dark": {
-            "brand": "text-[#0069D2]",
-            "btncolor" : "bg-[#0069D2] text-[#ffffff]",
-            "bg": "bg-[#101218]",
-            "bgsecondery": "bg-[#2E2E2E]",
+            "brand": "#0069D2",
+            "btnbg" : "#0069D2",
+            "btnColor": "#ffffff",
+            "bg": "#101218",
+            "bgSecondery": "#2E2E2E",
             "hoverbg": "hover:bg-[#54585D]",
-            "txt": "text-[#ffffff]",
-            "txtsecondery": "text-[#BEBEBE]",
-            "border": "border border-[#2E2E2E]",
+            "txt": "#ffffff",
+            "textSecondery": "#BEBEBE",
+            "borderColor": "#2E2E2E",
         }
 
     }

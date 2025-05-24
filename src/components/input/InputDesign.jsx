@@ -11,10 +11,10 @@ export const InputDesign = ({ type, label , icon , onChange , value , id}) => {
   const [inpType , setInpType] = React.useState(type)
 
   return (
-    <div className={`relative flex items-center border rounded-md h-[40px] ${color.border}  w-full  `}>
+    <div className={`relative flex items-center rounded-md h-[40px] border  w-full  `} style={{borderColor: color.borderColor}}>
 
       {/* icon  */}
-      {icon &&   <div className={`px-2 bg-brand/20 h-full grid place-items-center ${color.txt} ${color.bgsecondery}  rounded-tl-md rounded-bl-md   `}> {icon} </div> }
+      {icon &&   <div style={{color: color.txt , background: color.bgSecondery}} className={`px-2 bg-brand/20 h-full grid place-items-center    rounded-tl-md rounded-bl-md   `}> {icon} </div> }
 
       {/* input box */}
       <div className=" w-full h-full     ">
@@ -24,13 +24,15 @@ export const InputDesign = ({ type, label , icon , onChange , value , id}) => {
           onChange={onChange} 
           id={id}
           placeholder=" "
-          className={`peer ${color.txt} ${inpType == "password" ? "filter blur-[3px]" : ""} pl-1 pr-8 text-[14px] w-full h-full font-ubuntu placeholder-transparent outline-none  `}
+          style={{color: color.txt , }}
+          className={`peer  ${inpType == "password" ? "filter blur-[3px]" : ""} pl-1 pr-8 text-[14px] w-full h-full font-ubuntu placeholder-transparent outline-none  `}
         />
         {type == "password" &&
-          <button type="button" className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer">{inpType == "password" ? <GoEyeClosed onClick={()=> setInpType("text")} className={`${color.txtsecondery}`}/> : <GoEye onClick={()=> setInpType("password")} className={`${color.txtsecondery}`}/>}</button>
+          <button type="button" className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer">{inpType == "password" ? <GoEyeClosed onClick={()=> setInpType("text")} style={{color : color.textSecondery}} /> : <GoEye onClick={()=> setInpType("password")} style={{color : color.textSecondery}} />}</button>
         }
         <label
           htmlFor={id}
+          style={{color: color.txt}}
           className={`absolute top-[-10px]  left-0  text-gray-500 text-sm transition-all 
            peer-placeholder-shown:top-[19px] 
            translate-y-[-50%]
@@ -38,7 +40,7 @@ export const InputDesign = ({ type, label , icon , onChange , value , id}) => {
            ${!value && "peer-focus:animate-inputlabel" }
            peer-focus:top-[-10px]
            peer-focus:left-0
-           capitalize font-ubuntu font-medium ${color.txt} `}
+           capitalize font-ubuntu font-medium  `}
         >
           {label}
         </label>
