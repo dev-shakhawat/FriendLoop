@@ -7,6 +7,12 @@ import { Provider } from 'react-redux'
 import { Terms } from "./pages/Terms";
 import { ForgotPass } from "./pages/auth/ForgotPass";
 import { Checkpoint } from "./pages/auth/Checkpoint";
+import AuthLayout from "./components/lauouts/AuthLayout";
+import HomeLayout from "./components/lauouts/HomeLayout";
+import Home from "./pages/home/Home";
+import Friends from "./pages/friends/Friends";
+import Chat from "./pages/chat/Chat";
+import Groups from "./pages/groups/Groups";
 
 function App() {
 
@@ -21,12 +27,21 @@ function App() {
           <Route path="/terms" element={<Terms />} />
 
           {/* auth routes */}
-          <Route >
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/resetpassword" element={<ForgotPass />} />
-            <Route path="/checkpoint" element={<Checkpoint />} />
+          <Route path="/auth" element={<AuthLayout />} >
+            <Route path="login"  element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="resetpassword" element={<ForgotPass />} />
+            <Route path="checkpoint" element={<Checkpoint />} />
           </Route>
+
+          {/* default route/home */}
+          <Route path="/" element={<HomeLayout />}>
+             <Route index element={<Home />} />
+             <Route path="/friends" element={<Friends />} />
+             <Route path="/chat" element={<Chat />} />
+             <Route path="/groups" element={<Groups />} />
+          </Route>
+
         </Routes>
       </BrowserRouter>
     </Provider>

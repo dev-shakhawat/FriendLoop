@@ -10,8 +10,8 @@ function colorSchema() {
 
         // light mode
         "light": {
-            "brand": "#2D3250",
-            "btnbg":  "#0069D2",
+            "brand": "rgb(9 40 106)",
+            "btnbg":  "rgb(9 40 106)",
             "btnColor": "#ffffff",
             "bg": "#ffffff",
             "bgSecondery": "#F5F5F5",
@@ -19,7 +19,6 @@ function colorSchema() {
             "txt": "#2D3250",
             "textSecondery": "#BEBEBE",
             "borderColor": "#2E2E2E",
-
         } ,   
         
         

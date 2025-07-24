@@ -39,3 +39,8 @@
 }
 
 
+
+/* common css  */
+::-webkit-scrollbar {
+  display: none;
+}

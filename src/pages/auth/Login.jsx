@@ -1,62 +1,107 @@
-import React, { useState } from 'react'
-
-
+import React, { useState } from "react";
 
 // icons
 import { RiMicrosoftLoopFill } from "react-icons/ri";
 import { AiOutlineLogin } from "react-icons/ai";
-import {InputDesign } from '../../components/input/InputDesign';
+import { InputDesign } from "../../components/ui/input/InputDesign";
 import { LuMailOpen } from "react-icons/lu";
 import { BsShieldLock } from "react-icons/bs";
 
-
 // colors
-import colorSchema from '../../colors/colorSchema';
-import { Button } from '../../components/button/Button';
-import { Link } from 'react-router';
-
-
+import colorSchema from "../../colors/colorSchema";
+import { Button } from "../../components/ui/button/Button";
+import { Link } from "react-router";
 
 export const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  
-  const [email , setEmail] = useState("")
-  const [password , setPassword] = useState("")
+  const handelEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handelPassword = (e) => {
+    setPassword(e.target.value);
+  };
 
-  const handelEmail = (e)=>{ 
-    setEmail(e.target.value)
-  }
-  const handelPassword = (e)=>{ 
-    setPassword(e.target.value)
-  }
+  const color = colorSchema();
 
-  const color = colorSchema()
-
-  
   return (
-    <div className={`grid place-items-center h-screen  `} style={{background: color.bg}}>
-        <div className="text-center px-4 ">
-                <h2 style={{color: color.brand}} className={` flex items-center gap-2 font-ubuntu font-bold text-3xl justify-center `}><RiMicrosoftLoopFill/><span>FriendLoop</span></h2>
-                <h3 style={{color: color.txt}} className={`  font-medium mt-5 font-opensans`}>Welcome back! <br/> Missed us? We missed you too.  <br/> Let’s get you connected. </h3>
+    <div
+      className={`grid place-items-center h-screen  `}
+      style={{ background: color.bg }}
+    >
+      <div className="text-center px-4 ">
+        <h2
+          style={{ color: color.brand }}
+          className={` flex items-center gap-2 font-ubuntu font-bold text-3xl justify-center `}
+        >
+          <RiMicrosoftLoopFill />
+          <span>FriendLoop</span>
+        </h2>
+        <h3
+          style={{ color: color.txt }}
+          className={`  font-medium mt-5 font-opensans`}
+        >
+          Welcome back! <br /> Missed us? We missed you too. <br /> Let’s get
+          you connected.{" "}
+        </h3>
 
-                {/* login form */}
-                <form  className={`p-2 mt-10 `}>
-                  <div className="flex flex-col gap-5">
-                    <InputDesign id={"email"} value={email} onChange={(e)=> handelEmail(e)}  type={"text"} label={"email"} icon={<LuMailOpen/>} />
-                    <div className="flex flex-col items-end w-full ">
-                      <Link to={"/resetpassword"} style={{color: color.txt}} className={`font-opensans hover:underline  text-sm mt-1   `}  >Forgot Password?</Link>
-                      <InputDesign id={"password"} value={password} onChange={(e)=> handelPassword(e)}  type={"password"} label={"password"} icon={<BsShieldLock/>} />
-                    </div>
+        {/* login form */}
+        <form className={`p-2 mt-10 `}>
+          <div className="flex flex-col gap-5">
+            <InputDesign
+              id={"email"}
+              value={email}
+              onChange={(e) => handelEmail(e)}
+              type={"text"}
+              label={"email"}
+              icon={<LuMailOpen />}
+            />
+            <div className="flex flex-col items-end w-full ">
+              <Link
+                to={"/resetpassword"}
+                style={{ color: color.txt }}
+                className={`font-opensans hover:underline  text-sm mt-1   `}
+              >
+                Forgot Password?
+              </Link>
+              <InputDesign
+                id={"password"}
+                value={password}
+                onChange={(e) => handelPassword(e)}
+                type={"password"}
+                label={"password"}
+                icon={<BsShieldLock />}
+              />
+            </div>
 
-                    {/*  login button */}
-                    <div className="">
-                      <Button type={"button"} text={"Login"} style={"w-full py-2 font-ubuntu font-semibold  "} icon={<AiOutlineLogin className='text-xl' />} />
-                      
-                      <p style={{color: color.txt}} className={`font-ubuntu text-sm mt-1   ` }>If you haven't created an account, <Link to="/signup" style={{color: color.brand}} className={`font-semibold  `}>Sign Up</Link> now. </p>
-                    </div>
-                  </div>
-                </form>
-        </div>
+            {/*  login button */}
+            <div className="">
+              <Button
+                type={"button"}
+                text={"Login"}
+                style={"w-full py-2 font-ubuntu font-semibold  "}
+                icon={<AiOutlineLogin className="text-xl" />}
+              />
+
+              <p
+                style={{ color: color.txt }}
+                className={`font-ubuntu text-sm mt-1   `}
+              >
+                If you haven't created an account,{" "}
+                <Link
+                  to="/auth/signup"
+                  style={{ color: color.brand }}
+                  className={`font-semibold  `}
+                >
+                  Sign Up
+                </Link>{" "}
+                now.{" "}
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  )
-}
+  );
+};
