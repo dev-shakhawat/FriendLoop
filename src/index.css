@@ -4,9 +4,48 @@
 
 @theme{
 
+    /* color */
+    --color-bgdark-primary: #0f172a;
+    --color-bgdark-secondary: #1e293b;
+    --color-bgdark-tertiary: #334155;
+
+
+    /* light color */
+    --color-bglight-primary: #f9fafb;
+    --color-bglight-secondary: #ffffff;
+    --color-bglight-tertiary: #f1f5f9;
+
+
+    /* text color */
+    --color-light-text-primary: #181818;
+    --color-light-text-secondary: #555D6C;
+    --color-light-text-tertiary: #6c7380;
+    --color-dark-text-primary: #ffffff;
+    --color-dark-text-secondary: #c3c6cb;
+    --color-dark-text-tertiary: #555d6c;
+
+
+
+
+    /* animations */
+    --animate-bottomToTop: bottomToTop .2s ease-in-out;
+    @keyframes bottomToTop {
+      0%{
+        top: 12px;
+        opacity: 0;
+      }
+      100% {
+        top: 0px;
+        opacity: 1;
+      }
+    }
  
 }
 
 
+/* common css */
+.transition{
+    @apply transition-all duration-400
+}
 
  
