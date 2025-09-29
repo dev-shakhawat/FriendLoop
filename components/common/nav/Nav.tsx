@@ -30,7 +30,7 @@ export default function Nav() {
       <Search/>
 
       {/* nav options */}
-      <View style={{flexDirection: 'row' , gap: 5 }}>
+      <View style={{flexDirection: 'row' , gap: 15 }}>
 
         {/* create something */}
         <Create/>

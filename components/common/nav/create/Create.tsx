@@ -19,8 +19,8 @@ export default function Create() {
 
 
   return (
-    <View style={{...createStyles.createBox , backgroundColor: theme == 'dark' ? '#2a3345' : '#aaa5a5ff' }}>
-        <Feather name="plus" size={24} color={theme == 'dark' ? '#ffffff' : '#aaa5a5ff'} />
+    <View style={{...createStyles.createBox , backgroundColor: theme == 'dark' ? '#3c475cff' : '#e4e6ebff' }}>
+        <Feather name="plus" size={24} color={theme == 'dark' ? '#ffffff' : '#3c475cff'} />
     </View>
   )
 }

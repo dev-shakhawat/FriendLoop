@@ -15,16 +15,20 @@ import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import List from '../../list/List';
 import ThemeSwitch from '../../themeSwitch/ThemeSwitch';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
+import Devider from '../../devider/Devider';
 
 
 
 export default function Profile() {
 
-    const [isOpen, toggle, setIsOpen, dropdownRef] = useToggleWithOutsideClick(false);
+    const {theme} = useSelector((state: RootState) => state.theme)
+    const [isOpen, toggle , setIsOpen, dropdownRef] = useToggleWithOutsideClick(false);
     const profileOption = [
-      {icon : <Entypo name="credit-card" size={24} color="black" /> , btnText : 'My Billing' },
-      {icon : <Entypo name="modern-mic" size={24} color="black" /> , btnText : 'Settings' },
-      {icon : <Ionicons name="settings-outline" size={24} color="black" /> , btnText : 'Logout' }
+      {icon : <Entypo name="credit-card" size={24} color={ theme == 'dark' ? '#ffffff' : '#524e4eff' } /> , btnText : 'My Billing' },
+      {icon : <Entypo name="modern-mic" size={24} color={theme == 'dark' ? '#ffffff' : '#524e4eff'} /> , btnText : 'Settings' },
+      {icon : <Ionicons name="settings-outline" size={24} color={theme == 'dark' ? '#ffffff' : '#524e4eff'} /> , btnText : 'Logout' }
     ]
 
   return (
@@ -34,10 +38,13 @@ export default function Profile() {
           <Image style={profileStyles.profileIconImage} source={{uri: 'https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250'}}  />
         </TouchableOpacity>
  
-        <View style={{...profileStyles.dropDownBox , transitionDuration: '0.5s', opacity: isOpen ? 1 : 0 ,  transform: [{scale: isOpen ? 1 : .9}]   }} ref={dropdownRef}>
+        <View style={{...profileStyles.dropDownBox , backgroundColor: theme == 'dark' ? '#3c475cff' : '#e4e6ebff' , transitionDuration: '0.5s', opacity: isOpen ? 1 : 0 ,  transform: [{scale: isOpen ? 1 : .9}]   }} ref={dropdownRef}>
 
           {/* profile header */}
           <ProfileHeader/>
+
+          {/* devider */}
+          <Devider customeStyle={{marginBottom: 10}} />
 
           {/* profile options */}
           {profileOption.map((list)=>(
@@ -45,6 +52,10 @@ export default function Profile() {
           ))}
 
           <ThemeSwitch/>
+
+          {/* devider */}
+          <Devider customeStyle={{marginVertical: 10}} />
+
 
 
 

@@ -17,8 +17,8 @@ export default function Notification() {
   const {theme} = useSelector((state: RootState) => state.theme)
 
   return (
-    <View style={{...notiStyles.notiBox ,  backgroundColor: theme == 'dark' ? '#2a3345' : '#aaa5a5ff'  }}>
-        <Ionicons name="notifications-outline" size={24} color={theme == 'dark' ? '#ffffff' : '#aaa5a5ff'}  />
+    <View style={{...notiStyles.notiBox ,  backgroundColor: theme == 'dark' ? '#3c475cff' : '#e4e6ebff'  }}>
+        <Ionicons name="notifications-outline" size={24} color={theme == 'dark' ? '#ffffff' : '#3c475cff'}  />
     </View>
   )
 }

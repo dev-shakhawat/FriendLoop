@@ -1,8 +1,9 @@
 import { themeSet } from "@/redux/allSlices/theme/themeSlice";
+import { RootState } from "@/redux/store";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
 import { Text, TouchableOpacity, useColorScheme, View } from "react-native";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 type ThemeType = "light" | "dark" | "system";
 
@@ -10,6 +11,7 @@ export default function ThemeSwitch() {
   const systemScheme = useColorScheme();
   const [currentTheme, setCurrentTheme] = useState<ThemeType>("system"); 
   const dispatch = useDispatch();
+  const {theme} = useSelector((state: RootState) => state.theme)
 
   // Load saved theme on app start
   useEffect(() => {
@@ -57,17 +59,17 @@ export default function ThemeSwitch() {
     >
       {/* Light Theme */}
       <TouchableOpacity onPress={() => handleSwitchTheme("light")}>
-        <Text>Light</Text>
+        <Text style={{ color: theme == 'dark' ? '#ffffff' : '#524e4eff' }}>Light</Text>
       </TouchableOpacity>
 
       {/* Dark Theme */}
       <TouchableOpacity onPress={() => handleSwitchTheme("dark")}>
-        <Text>Dark</Text>
+        <Text style={{ color: theme == 'dark' ? '#ffffff' : '#524e4eff' }}>Dark</Text>
       </TouchableOpacity>
 
       {/* System Theme */}
       <TouchableOpacity onPress={() => handleSwitchTheme("system")}>
-        <Text>System</Text>
+        <Text style={{ color: theme == 'dark' ? '#ffffff' : '#524e4eff' }}>System</Text>
       </TouchableOpacity>
     </View>
   );
