@@ -38,7 +38,7 @@ export default function Profile() {
           <Image style={profileStyles.profileIconImage} source={{uri: 'https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250'}}  />
         </TouchableOpacity>
  
-        <View style={{...profileStyles.dropDownBox , backgroundColor: theme == 'dark' ? '#3c475cff' : '#e4e6ebff' , transitionDuration: '0.5s', opacity: isOpen ? 1 : 0 ,  transform: [{scale: isOpen ? 1 : .9}]   }} ref={dropdownRef}>
+        <View style={{...profileStyles.dropDownBox , backgroundColor: theme == 'dark' ? '#3c475cff' : '#e4e6ebff' , transitionDuration: '0.5s', opacity: isOpen ? 1 : 0 ,  transform: [{scale: isOpen ? 1 : .9}] , pointerEvents: isOpen ? 'auto' : 'none',   }} ref={dropdownRef}>
 
           {/* profile header */}
           <ProfileHeader/>

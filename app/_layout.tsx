@@ -6,33 +6,37 @@ import { View, Text, StyleSheet } from "react-native";
 import { Provider } from 'react-redux'
 import { store } from "@/redux/store";
 
+// components
+import SideNav from "@/components/common/sideNav/SideNav";
+
 export default function RootLayout() {
+ 
+
   return (
     <Provider store={store}>
       
-      <View style={styles.container}>
+      <View style={{flex: 1  }}  >
         {/* Common Header */}
         <Nav/>
 
-        {/* Navigation control via Stack */}
-        <Stack screenOptions={{ headerShown: false }}>
-          <Slot />
-        </Stack>
 
-        {/* Common Footer */}
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>© 2025 My App</Text>
+        {/* side nav and Stack */}
+        <View style={{flex: 1 , flexDirection: 'row' , }}>
+
+          {/* side nav */}
+          <SideNav/>
+
+          {/* Navigation control via Stack */}
+          <Stack screenOptions={{ headerShown: false }}>
+            <Slot />
+          </Stack>
+
         </View>
+ 
       </View>
       
     </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#fff" },
-  header: { padding: 15, backgroundColor: "#6200EE" },
-  headerText: { color: "#fff", fontSize: 18, fontWeight: "bold" },
-  footer: { padding: 10, backgroundColor: "#eee", alignItems: "center" },
-  footerText: { color: "#333" },
-});
+ 
