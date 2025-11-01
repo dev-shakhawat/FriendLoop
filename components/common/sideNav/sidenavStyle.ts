@@ -1,8 +1,9 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native"; 
 
 const sideNavStyles = StyleSheet.create({
-    list: {   
-        
+    sideNavBox: {   
+        padding: 15,
+        rowGap: 10
     },
 });
 

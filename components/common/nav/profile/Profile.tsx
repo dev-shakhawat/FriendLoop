@@ -26,9 +26,9 @@ export default function Profile() {
     const {theme} = useSelector((state: RootState) => state.theme)
     const [isOpen, toggle , setIsOpen, dropdownRef] = useToggleWithOutsideClick(false);
     const profileOption = [
-      {icon : <Entypo name="credit-card" size={24} color={ theme == 'dark' ? '#ffffff' : '#524e4eff' } /> , btnText : 'My Billing' },
-      {icon : <Entypo name="modern-mic" size={24} color={theme == 'dark' ? '#ffffff' : '#524e4eff'} /> , btnText : 'Settings' },
-      {icon : <Ionicons name="settings-outline" size={24} color={theme == 'dark' ? '#ffffff' : '#524e4eff'} /> , btnText : 'Logout' }
+      {icon : <Entypo name="credit-card" size={24} color={ theme == 'dark' ? '#ffffff' : '#524e4eff' } /> , btnText : 'My Billing' , link: "#" },
+      {icon : <Entypo name="modern-mic" size={24} color={theme == 'dark' ? '#ffffff' : '#524e4eff'} /> , btnText : 'Settings' , link: "#" },
+      {icon : <Ionicons name="settings-outline" size={24} color={theme == 'dark' ? '#ffffff' : '#524e4eff'} /> , btnText : 'Logout' , link: "#" },
     ]
 
   return (
@@ -48,16 +48,13 @@ export default function Profile() {
 
           {/* profile options */}
           {profileOption.map((list)=>(
-            <List key={list.btnText} icon={list.icon} btnText={list.btnText}  />
+            <List key={list.btnText} icon={list.icon} btnText={list.btnText} href={list.link}  />
           ))}
 
           <ThemeSwitch/>
 
           {/* devider */}
           <Devider customeStyle={{marginVertical: 10}} />
-
-
-
 
         </View> 
 

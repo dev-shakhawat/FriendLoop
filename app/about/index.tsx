@@ -3,8 +3,7 @@ import { Dimensions } from 'react-native';
 import { Link } from "expo-router"; 
 
 export default function About() {
-  const { width, height } = Dimensions.get('window');
-  console.log(width, height);
+  const { width, height } = Dimensions.get('window'); 
   
   return (
     <SafeAreaView> 
